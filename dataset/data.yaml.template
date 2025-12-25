@@ -1,0 +1,7 @@
+# Template data.yaml for YOLO (Ultralytics)
+# Replace paths or use the prepare script to generate data.yaml automatically.
+
+train: dataset/images/train
+val: dataset/images/val
+nc: 2
+names: ['class0','class1']
