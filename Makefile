@@ -53,7 +53,7 @@ check-dataset:
 
 install:
 	@echo "Installing ultralytics..."
-	pip3 install ultralytics
+	pip3 install ultralyticsm
 
 train:
 	@echo "Training YOLO model..."
@@ -64,7 +64,7 @@ validate:
 	source venv/bin/activate && yolo val data=$(DEST_DIR)/data.yaml model=runs/detect/train/weights/best.pt
 predict:
 	@echo "Running prediction..."
-	yolo predict model=runs/detect/train/weights/best.pt source=$(DEST_DIR)/images/val
+	source venv/bin/activate && yolo predict model=runs/detect/train/weights/best.pt source=$(DEST_DIR)/images/val
 
 detect:
 	@echo "Running detection from clipboard URL/path..."
